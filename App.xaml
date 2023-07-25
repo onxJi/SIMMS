@@ -1,0 +1,28 @@
+﻿<prism:PrismApplication x:Class="SIMMS.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SIMMS"
+             xmlns:prism="http://prismlibrary.com/" >
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/ButtonStyleIconWindow.xaml">
+                </ResourceDictionary>
+                <ResourceDictionary Source="/Styles/Colors.xaml">
+                </ResourceDictionary>
+                <ResourceDictionary Source="/Styles/TextBlockStyle.xaml">
+                </ResourceDictionary>
+                <ResourceDictionary Source="/Styles/TextBoxRoundedStyle.xaml">
+                </ResourceDictionary>
+                <ResourceDictionary Source="/Styles/Strings/Strings.xaml">
+                </ResourceDictionary>
+                <ResourceDictionary Source="/Styles/ButtonRounded.xaml">
+
+                </ResourceDictionary>
+                
+                <ResourceDictionary Source="/Styles/MenuItem.xaml"/>
+                <ResourceDictionary Source="/Styles/WpfUIStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</prism:PrismApplication>

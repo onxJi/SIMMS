@@ -1,0 +1,197 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="MenuItem1" TargetType="MenuItem">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type MenuItem}">
+                    <Border x:Name="border"
+                            Background="Transparent"
+                            CornerRadius="5"
+                            BorderThickness="0"
+                            >
+                        <Grid>
+                            <!--Icon-->
+                            <ContentPresenter ContentSource="Icon"
+                                              HorizontalAlignment="Left"
+                                              VerticalAlignment="Center"
+                                              Height="22" Width="22" Margin="8,0,0,0"/>
+                            <!--Text-->
+                            <ContentPresenter ContentSource="Header"
+                                              TextBlock.Foreground="White"
+                                              TextBlock.FontFamily="Rubik Medium"
+                                              TextBlock.FontSize="15"
+                                              TextBlock.FontStretch="Medium"
+                                              TextBlock.FontWeight="Bold"
+                                              HorizontalAlignment="Left"
+                                              VerticalAlignment="Center"
+                                              Margin="35,0,0,0"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsHighlighted"
+                                 Value="True">
+                            <Setter Property="Background" TargetName="border"
+                                    
+                                    Value="{StaticResource TopBarColor}"/>
+                            <Setter Property="BorderBrush" 
+                                    TargetName="border"
+                                    Value="#000000"/>
+
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{StaticResource TopBarColor}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="MenuItem2" TargetType="MenuItem">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type MenuItem}">
+                    <Border x:Name="border"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            CornerRadius="5"
+                            Height="30"
+                            Width="150">
+                        <Grid>
+
+                            <!--Icon-->
+                            <ContentPresenter ContentSource="Icon"
+                                              HorizontalAlignment="Left"
+                                              VerticalAlignment="Center"
+                                              Height="22" Width="22" Margin="5,0,0,0"/>
+                            <!--Text-->
+                            <ContentPresenter ContentSource="Header"
+                                              TextBlock.Foreground="White"
+                                              TextBlock.FontFamily="Rubik Medium"
+                                              TextBlock.FontSize="15"
+                                              TextBlock.FontStretch="Medium"
+                                              TextBlock.FontWeight="Bold"
+                                              HorizontalAlignment="Left"
+                                              VerticalAlignment="Center"
+                                              Margin="35,0,0,0"/>
+                            <!--// Dropdown Icon //-->
+                            <Image Source="/Images/dropdown.png"
+                                       Stretch="None"
+                                       HorizontalAlignment="Right"
+                                       VerticalAlignment="Center"
+                                       Margin="0,0,10,0" />
+                            <!--POPUP-->
+                            <Popup x:Name="popup"
+                                   AllowsTransparency="True"
+                                   IsOpen="{Binding IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}"
+                                   Placement="Bottom"
+                                   PopupAnimation="{DynamicResource {x:Static SystemParameters.MenuPopupAnimationKey}}">
+                                <Border x:Name="SubMenuBorder"
+                                        Background="{StaticResource TopBarColor}"
+                                        BorderBrush="DarkGray"
+                                        CornerRadius="5"
+                                        >
+                                    <ScrollViewer x:Name="SubMenuScroll"
+                                                  Style="{DynamicResource {ComponentResourceKey ResourceId=MenuScrollViewer,
+                                                          TypeInTargetAssembly={x:Type FrameworkElement}}}">
+                                        <Grid RenderOptions.ClearTypeHint="Enabled">
+
+                                            <Canvas HorizontalAlignment="Left"
+                                                        VerticalAlignment="Top" />
+
+                                            <ItemsPresenter x:Name="ItemsPresenter" />
+
+                                        </Grid>
+
+                                    </ScrollViewer>
+
+                                </Border>
+                            </Popup>
+                        </Grid>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsSuspendingPopupAnimation"
+                                     Value="True">
+                            <Setter Property="PopupAnimation"
+                                        TargetName="popup"
+                                        Value="None" />
+                        </Trigger>
+                        <Trigger Property="IsHighlighted"
+                                     Value="True">
+                            <Setter Property="Background"
+                                        TargetName="border"
+                                        Value="{StaticResource TopBarColor}" />
+                            <Setter Property="BorderBrush"
+                                        TargetName="border"
+                                        Value="#524E4F" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#8A9F9B"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="MenuItem3" TargetType="MenuItem">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type MenuItem}">
+                    <Border x:Name="border"
+                            Background="Transparent"
+                            CornerRadius="5"
+                            BorderThickness="0"
+                            Height="30"
+                            >
+                        <Grid>
+                            <!--Icon-->
+                            <ContentPresenter ContentSource="Icon"
+                                              HorizontalAlignment="Left"
+                                              VerticalAlignment="Center"
+                                              Height="18" Width="18" Margin="5,0,0,0"/>
+                            <!--Text-->
+                            <ContentPresenter ContentSource="Header"
+                                              TextBlock.Foreground="White"
+                                              TextBlock.FontFamily="Rubik Medium"
+                                              TextBlock.FontSize="12"
+                                              TextBlock.FontStretch="Medium"
+                                              TextBlock.FontWeight="Bold"
+                                              HorizontalAlignment="Left"
+                                              VerticalAlignment="Center"
+                                              Margin="35,0,0,0"/>
+                            <Grid x:Name="HighLighter"
+                                  Height="35"
+                                  Width="2"
+                                  Background="Aquamarine"
+                                  HorizontalAlignment="Left"
+                                  VerticalAlignment="Center"
+                                  Visibility="Collapsed">
+
+                            </Grid>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsHighlighted"
+                                 Value="True">
+                            <Setter Property="Background" TargetName="border"
+                                    
+                                    Value="#8A9F9B"/>
+                            <Setter Property="BorderBrush" 
+                                    TargetName="border"
+                                    Value="#000000"/>
+                            <Setter Property="Visibility"
+                                    TargetName="HighLighter"
+                                    Value="Visible"/>
+
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#8A9F9B"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

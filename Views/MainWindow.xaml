@@ -1,0 +1,385 @@
+﻿<Window x:Class="SIMMS.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        WindowStartupLocation="CenterScreen"
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+        MinHeight="600"
+        MinWidth="850"
+        WindowStyle="None" Background="Transparent"
+        AllowsTransparency="True"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        Title="{Binding Title}" Height="800" Width="1100" >
+    <Border CornerRadius="10" 
+            BorderThickness="1" 
+            BorderBrush="Aquamarine"
+            >
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                <GradientStop Color="#bdc3c7" Offset="0"/>
+                <GradientStop Color="#FFDDDDDD" Offset="1.0"/>
+            </LinearGradientBrush>
+
+        </Border.Background>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border CornerRadius="10,10,0,0" Grid.Row="0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#3f7287" Offset="0.35"/>
+                        <GradientStop Color="#468b92" Offset="0.75"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <!--Title and Buttons separation -->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <!--Title and logo-->
+                        <ColumnDefinition/>
+                        <!--Windows's buttons-->
+                        <ColumnDefinition Width="150"/>
+
+                    </Grid.ColumnDefinitions>
+                    <Border>
+                        <StackPanel x:Name="ControlBar" Orientation="Horizontal" Background="Transparent"
+                                    FlowDirection="LeftToRight" MouseLeftButtonDown="ControlBar_MouseLeftButtonDown"
+                                    MouseEnter="ControlBar_MouseEnter">
+                            <Image Source="/Images/logo_simms.png" Margin="15,0,0,0"/>
+                            <TextBlock Text="sySIMMS" FontSize="24"
+                                       Margin="12,0,0,0" TextAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Foreground="White"/>
+                        </StackPanel>
+                    </Border>
+                    <!--Windows's buttons-->
+                    <Border Background="Transparent"
+                            Grid.Column="2"
+                            CornerRadius="0,10,0,15"
+                        >
+                        <Grid HorizontalAlignment="Right">
+                            <Grid.ColumnDefinitions>
+                                <!--Minimized Button-->
+                                <ColumnDefinition Width="30"/>
+                                <!--Maximized Button-->
+                                <ColumnDefinition Width="30"/>
+                                <!--Close Button-->
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="10"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Style="{StaticResource menuButton}"
+                                    Grid.Column="0"
+                                    x:Name="BtnMinimize"
+                                    Tag="{StaticResource ButtonFlagOrange3}"
+                                    Click="BtnMinimize_Click"  Cursor="Hand"
+               
+                                    >
+                                <StackPanel Orientation="Vertical"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center">
+                                    <fa:IconImage Icon="WindowMinimize" Style="{StaticResource menuButtonIcon}"/>
+                                </StackPanel>
+                            </Button>
+                            <Button x:Name="BtnMaximize"
+                                    Style="{StaticResource menuButton}"
+                                    Grid.Column="1"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Click="BtnMaximize_Click"
+                                    Tag="{StaticResource ButtonFlagOrange3}">
+                                <StackPanel Orientation="Vertical"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center">
+                                    <fa:IconImage Icon="Square" Style="{StaticResource menuButtonIcon}"
+                                                  IconFont="Regular"/>
+                                </StackPanel>
+                            </Button>
+                            <Button x:Name="BtnClose"
+                                    Style="{StaticResource menuButton}"
+                                    Grid.Column="2"
+                                    Tag="{StaticResource ButtonFlagOrange3}"                                  
+                                    Click="BtnClose_Click"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                                <StackPanel Orientation="Vertical"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center">
+                                    <fa:IconImage Icon="Xmark" Style="{StaticResource menuButtonIcon}"/>
+                                </StackPanel>
+                            </Button>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+            <!--Container Panel-->
+            <Border Grid.Row="1"
+                    CornerRadius="0,0,10,10"
+                    >
+
+                <Grid Grid.Row="1">
+
+
+                    <Grid.RowDefinitions>
+                        <!--Container Menu-->
+                        <RowDefinition Height="60"/>
+                        <!--Container Windows´s Secundaries-->
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <!--Container Menu-->
+                    <Border CornerRadius="10"
+                        Margin="10,5,10,5"
+                        Opacity=".90"
+                        BorderBrush="Gray"
+                        BorderThickness="1">
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0.5" EndPoint="0,0.7"
+                                             Opacity="0.2">
+                                <GradientStop Color="#dfeff0" Offset="0"/>
+                                <GradientStop Color="#f0f1f7" Offset="0.75"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Border.Effect>
+                            <DropShadowEffect Color="Black"
+                                          Opacity="0.5"
+                                          Direction="90"
+                                          ShadowDepth="2"
+                                          BlurRadius="35"/>
+                        </Border.Effect>
+                        <!--Menu General-->
+                        <StackPanel Orientation="Horizontal">
+                            <Menu Height="50"
+                          Margin="5"
+                          Background="Transparent"
+                          VerticalAlignment="Top"
+                          HorizontalAlignment="Center"
+                          >
+                                <MenuItem x:Name="Inicio"
+                                          Header="Inicio"
+                                          Width="110"
+                                          Height="30"
+                                          Command="{Binding NavigateCommand}"
+                                          CommandParameter="Home"
+                                          Style="{StaticResource MenuItem1}">
+                                    <MenuItem.Icon>
+                                        <Image Source="/Images/home.png"
+                                           Stretch="Uniform"/>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <!--Menu Almacen-->
+                                <MenuItem x:Name="Almacen"
+                                    Header="Almacen"
+                                    Height="30"
+                                    Width="150"
+                                    IsEnabled="{Binding IsEnableAlmacen}"
+                                    Style="{StaticResource MenuItem2}">
+                                    <MenuItem.Icon>
+                                        <Image Source="/Images/menu_almacen.png"
+                                           Stretch="Uniform"/>
+                                    </MenuItem.Icon>
+                                    <!-- Database Option-->
+                                    <MenuItem x:Name="DataBase"
+                                          Command="{ Binding NavigateCommand}"
+                                          CommandParameter="DataBase"
+                                          Header="Base de datos"
+                                          Height="35"
+                                          Width="180"
+                                          Style="{StaticResource MenuItem3}">
+                                        <MenuItem.Icon>
+                                            <Image Source="/Images/database_option.png"
+                                           Stretch="Uniform"/>
+                                        </MenuItem.Icon>
+
+                                    </MenuItem>
+                                    <!--Agree User option-->
+                                    <MenuItem x:Name="AgreeUsuario"
+                                          
+                                          Header="Añadir Usuario"
+                                          Height="35"
+                                          Width="180"
+                                          Style="{StaticResource MenuItem3}">
+                                        <MenuItem.Icon>
+                                            <Image Source="/Images/agregarUsuario.png"
+                                           Stretch="Uniform"/>
+                                        </MenuItem.Icon>
+                                    </MenuItem>
+                                    <!--Kit de trabajadores-->
+                                    <MenuItem x:Name="KitJob"
+                                          Header="Kit de Trabajadores"
+                                          Height="35"
+                                          Width="180"
+                                          Style="{StaticResource MenuItem3}">
+                                        <MenuItem.Icon>
+                                            <Image Source="/Images/kitTrabajador.png"
+                                           Stretch="Uniform"/>
+                                        </MenuItem.Icon>
+                                    </MenuItem>
+                                    <!--Documents Format option-->
+                                    <MenuItem x:Name="Formatos"
+                                          Header="Realizar formatos"
+                                          Height="35"
+                                          Width="180"
+                                          Style="{StaticResource MenuItem3}">
+                                        <MenuItem.Icon>
+                                            <Image Source="/Images/documents.png"
+                                           Stretch="Uniform"/>
+                                        </MenuItem.Icon>
+                                    </MenuItem>
+                                    <!--Subir a la base de datos-->
+                                    <MenuItem x:Name="SubirDoc"
+                                          Header="Subir a la Base de datos"
+                                          Height="35"
+                                          Width="180"
+                                          Style="{StaticResource MenuItem3}">
+                                        <MenuItem.Icon>
+                                            <Image Source="/Images/subir.png"
+                                           Stretch="Uniform"/>
+                                        </MenuItem.Icon>
+                                    </MenuItem>
+
+                                </MenuItem>
+                                <!--Menu Operaciones-->
+                                <MenuItem x:Name="Operaciones"
+                                          Header="Operaciones"
+                                          Height="40"
+                                          Width="150"
+                                          IsEnabled="{Binding IsEnableOperaciones}"
+                                          Style="{StaticResource MenuItem2}">
+                                    <MenuItem.Icon>
+                                        <Image Source="/Images/menu_operaciones.png"
+                                           Stretch="Uniform"/>
+                                    </MenuItem.Icon>
+                                    <!-- WorkTeams Option-->
+                                    <MenuItem x:Name="WorkTeams"
+                                          Header="Equipos de trabajos"
+                                          Height="35"
+                                          Width="180"
+                                          Style="{StaticResource MenuItem3}">
+                                        <MenuItem.Icon>
+                                            <Image Source="/Images/work_teams.png"
+                                           Stretch="UniformToFill"/>
+                                        </MenuItem.Icon>
+
+                                    </MenuItem>
+                                    <!-- WorkTeams Option-->
+                                    <MenuItem x:Name="ActivityAssignment"
+                                          Header="Asignación de Actividades"
+                                          Height="35"
+                                          Width="190"
+                                          Style="{StaticResource MenuItem3}">
+                                        <MenuItem.Icon>
+                                            <Image Source="/Images/actividades.png"
+                                           Stretch="UniformToFill"/>
+                                        </MenuItem.Icon>
+
+                                    </MenuItem>
+                                    <!-- WorkTeams Option-->
+                                    <MenuItem x:Name="ToolsControl"
+                                          Header="Control de herramientas"
+                                          Height="35"
+                                          Width="190"
+                                          Style="{StaticResource MenuItem3}">
+                                        <MenuItem.Icon>
+                                            <Image Source="/Images/maletin.png"
+                                           Stretch="UniformToFill"/>
+                                        </MenuItem.Icon>
+
+                                    </MenuItem>
+                                    <!--Subir a la base de datos-->
+                                    <MenuItem x:Name="SubirDoc2"
+                                          Header="Subir a la Base de datos"
+                                          Height="35"
+                                          Width="180"
+                                          Style="{StaticResource MenuItem3}">
+                                        <MenuItem.Icon>
+                                            <Image Source="/Images/cloud-upload-alt.png"
+                                           Stretch="Uniform"/>
+                                        </MenuItem.Icon>
+                                    </MenuItem>
+                                </MenuItem>
+                                <!--Menu Finanzas-->
+                                <MenuItem x:Name="Finanzas"
+                                          Header="Finanzas"
+                                          Height="40"
+                                          Width="150"
+                                          IsEnabled="{Binding IsEnableFinanzas}"
+                                          Style="{StaticResource MenuItem2}">
+                                    <MenuItem.Icon>
+                                        <Image Source="/Images/menu_finanzas.png"
+                                           Stretch="Uniform"/>
+                                    </MenuItem.Icon>
+                                    <!-- WorkTeams Option-->
+                                    <MenuItem x:Name="Charts"
+                                          Header="Equipos de trabajos"
+                                          Height="35"
+                                          Width="180"
+                                          Style="{StaticResource MenuItem3}">
+                                        <MenuItem.Icon>
+                                            <Image Source="/Images/work_teams.png"
+                                           Stretch="UniformToFill"/>
+                                        </MenuItem.Icon>
+
+                                    </MenuItem>
+                                    <!-- WorkTeams Option-->
+                                    <MenuItem x:Name="Enterprise"
+                                          Header="Asignación de Actividades"
+                                          Height="35"
+                                          Width="190"
+                                          Style="{StaticResource MenuItem3}">
+                                        <MenuItem.Icon>
+                                            <Image Source="/Images/actividades.png"
+                                           Stretch="UniformToFill"/>
+                                        </MenuItem.Icon>
+
+                                    </MenuItem>
+                                </MenuItem>
+                                <!--Menu Finanzas-->
+                                <MenuItem x:Name="HumansResources"
+                                          Header="R. Humanos"
+                                          Height="40"
+                                          Width="150"
+                                          IsEnabled="{Binding IsEnableRecursosH}"
+                                          Style="{StaticResource MenuItem2}">
+                                    <MenuItem.Icon>
+                                        <Image Source="/Images/menu_recursos.png"
+                                           Stretch="Uniform"/>
+                                    </MenuItem.Icon>
+                                    <!-- WorkTeams Option-->
+                                    <MenuItem x:Name="Contratos"
+                                          Header="Equipos de trabajos"
+                                          Height="35"
+                                          Width="180"
+                                          Style="{StaticResource MenuItem3}">
+                                        <MenuItem.Icon>
+                                            <Image Source="/Images/work_teams.png"
+                                           Stretch="UniformToFill"/>
+                                        </MenuItem.Icon>
+
+                                    </MenuItem>
+                                    <!-- WorkTeams Option-->
+                                    <MenuItem x:Name="journals"
+                                          Header="Asignación de Actividades"
+                                          Height="35"
+                                          Width="190"
+                                          Style="{StaticResource MenuItem3}">
+                                        <MenuItem.Icon>
+                                            <Image Source="/Images/actividades.png"
+                                           Stretch="UniformToFill"/>
+                                        </MenuItem.Icon>
+
+                                    </MenuItem>
+                                </MenuItem>
+                            </Menu>
+                        </StackPanel>
+
+                    </Border>
+                    <!--///////////////////-->
+                    <Border Grid.Row="1">
+                        <ContentControl Margin="15"
+                                        prism:RegionManager.RegionName="ContentRegion">
+
+                        </ContentControl>
+                    </Border>
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</Window>

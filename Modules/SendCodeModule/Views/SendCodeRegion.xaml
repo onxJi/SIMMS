@@ -1,0 +1,103 @@
+﻿<UserControl x:Class="SIMMS.Modules.SendCodeModule.Views.SendCodeRegion"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SIMMS.Modules.SendCodeModule.Views"
+             mc:Ignorable="d" 
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel>
+        <TextBlock Text="Restablecer"
+                   HorizontalAlignment="Center"
+                   FontSize="28"
+                   FontFamily="Montserrat"
+                   FontWeight="ExtraBlack"
+                   Foreground="White">
+
+        </TextBlock>
+        <TextBlock Text="¡Contraseña!"
+                   Foreground="{StaticResource ButtonFlagOrange2}"
+                   HorizontalAlignment="Center"
+                   FontSize="28"
+                   FontFamily="Monserrat"
+                   FontWeight="Bold"/>
+        <TextBlock Text="{StaticResource textIndicationsResetPassword}"
+                   TextAlignment="Center"
+                   TextWrapping="Wrap"
+                   Margin="0,10,0,0"
+                   FontSize="14"
+                   Foreground="Silver"
+                   FontWeight="DemiBold"
+                   Width="300"/>
+        <StackPanel Orientation="Horizontal"
+                    Margin="0,20,0,0"
+                    HorizontalAlignment="Center">
+            <TextBlock Text="Correo: "
+                       Foreground="White"
+                       TextAlignment="Center"
+                       VerticalAlignment="Center"/>
+            <TextBox 
+                     Height="30"
+                     Width="200"
+                     FontSize="14"
+                     Text="{Binding Email, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                     Background="Silver"
+                     BorderBrush="Transparent"
+                     Opacity="0.80"
+                     VerticalAlignment="Center"
+                     TextAlignment="Center"
+                     TextWrapping="Wrap"
+                     Style="{StaticResource TextBoxRoundedStyle}"
+                     >
+
+            </TextBox>
+            <Button Content="Enviar Codigo"
+                    Width="100"
+                    Command="{Binding SendCodeCommand, UpdateSourceTrigger=PropertyChanged}"
+                    FontWeight="Bold"
+                    Foreground="White"
+                    Margin="10,0,0,0"
+                    Style="{StaticResource ButtonRounded}" Cursor="">
+
+            </Button>
+        </StackPanel>
+        <TextBlock Text="Insegre el codigo"
+                   HorizontalAlignment="Center"
+                   Margin="0,30,0,0"
+                   FontSize="16"
+                   Foreground="White"/>
+        <TextBox Margin="0,10,0,0"
+                 Height="40"
+                 Width="200"
+                 FontSize="20"
+                 Text="{Binding CodeValidation, UpdateSourceTrigger=PropertyChanged}"
+                 Background="Silver"
+                 BorderBrush="Transparent"
+                 Opacity="0.80"
+                 VerticalAlignment="Center"
+                 TextAlignment="Center"
+                 TextWrapping="Wrap"
+                 Style="{StaticResource TextBoxRoundedStyle}"
+                 >
+
+        </TextBox>
+        <Button Content="Verificar Codigo"
+                HorizontalAlignment="Center"
+                Width="100"
+                Command="{Binding ValidationCodeCommand}"
+                Margin="0,10,0,0"
+                Foreground="White"
+                FontWeight="Bold"
+                Height="35"
+                
+                Style="{StaticResource ButtonRounded}"/>
+        <TextBlock Text="{Binding ErrorMessage, UpdateSourceTrigger=PropertyChanged}"
+                   Foreground="Red"
+                   Margin="0,20,0,0"
+                   FontSize="14"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"/>
+    </StackPanel>
+</UserControl>
