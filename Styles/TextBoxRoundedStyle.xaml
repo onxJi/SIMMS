@@ -8,7 +8,22 @@
             <Style TargetType="Border">
                 <Setter Property="CornerRadius" Value="10"/>
             </Style>
-
+        </Style.Resources>
+    </Style>
+    <Style x:Key="TextBoxRoundedStyle2" TargetType="TextBox">
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Style.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect BlurRadius="5"
+                                          ShadowDepth="1"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
         </Style.Resources>
     </Style>
 </ResourceDictionary>

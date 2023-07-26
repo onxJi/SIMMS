@@ -34,8 +34,9 @@ namespace SIMMS
         {
             moduleCatalog.AddModule<Modules.ChangePasswordModule.ChangePasswordRegionModule>();
             moduleCatalog.AddModule<Modules.HomeModule.HomeRegionModule>();
-            //moduleCatalog.AddModule<WpfApp1.ModuleCModule>();
-        }
+			moduleCatalog.AddModule<Modules.DataBaseModule.DataBaseModuleRegions>();
+			//moduleCatalog.AddModule<WpfApp1.ModuleCModule>();
+		}
         protected override void OnInitialized()
         {
             var login = Container.Resolve<Login>();

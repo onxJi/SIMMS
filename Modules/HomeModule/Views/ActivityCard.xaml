@@ -55,7 +55,7 @@
                            />
                 <StackPanel Grid.Column="1">
                     <Button Grid.Column="1"
-                        Content="Cambiar"
+                        Content="Actualizar"
                         Width="100"
                         Height="30"
                         Command="{Binding ChangeActivityDataCommand}"

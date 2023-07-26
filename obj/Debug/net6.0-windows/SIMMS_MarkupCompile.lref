@@ -3,6 +3,9 @@ FC:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\App.xaml;;
 FC:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\ControlStyles\TextBoxPassword.xaml;;
 FC:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\ControlStyles\TextBoxPasswordRounded.xaml;;
 FC:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\Modules\ChangePasswordModule\Views\ChangePasswordRegion.xaml;;
+FC:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\Modules\DataBaseModule\Views\DataBase.xaml;;
+FC:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\Modules\DataBaseModule\Views\DataBaseCard.xaml;;
+FC:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\Modules\DataBaseModule\Views\DataBaseCreateProduct.xaml;;
 FC:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\Modules\HomeModule\Views\ActivityCard.xaml;;
 FC:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\Modules\HomeModule\Views\ChangeDataActivity.xaml;;
 FC:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\Modules\SendCodeModule\Views\SendCodeRegion.xaml;;
@@ -10,5 +13,4 @@ FC:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\Views\Home.xaml;;
 FC:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\Views\Login.xaml;;
 FC:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\Views\RegisterNewUser.xaml;;
 FC:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\Views\ResetPassword.xaml;;
-FC:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\Modules\DataBaseModule\Views\DataBase.xaml;;
 

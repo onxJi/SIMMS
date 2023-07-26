@@ -223,7 +223,7 @@
                                  TextAlignment="Center"
                                  TextWrapping="Wrap"
                                  Style="{StaticResource 
-                                 TextBoxRoundedStyle}">
+                                 TextBoxRoundedStyle2}">
 
                         </TextBox>
                         <Grid Grid.Column="2">

@@ -26,7 +26,7 @@
         </Style.Triggers>
     </Style>
     <Style x:Key="ButtonRounded4" TargetType="Button">
-        <Setter Property="Background" Value="red"/>
+        <Setter Property="Background" Value="#FF5757"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -46,7 +46,7 @@
 
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value=" true">
-                <Setter Property="Background" Value="#fa4d4d"/>
+                <Setter Property="Background" Value="red"/>
                 <Setter Property="BorderBrush" Value="{Binding Path=Tag, RelativeSource={RelativeSource Self}}"/>
             </Trigger>
         </Style.Triggers>
@@ -113,6 +113,33 @@
 
 
     </Style>
+
+    <Style x:Key="ButtonRoundedGreen" TargetType="Button">
+        <Setter Property="Background" Value="#34918f"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Resources>
+            <Style TargetType="{x:Type Border}">
+                <Setter Property="CornerRadius" Value="10"/>
+            </Style>
+        </Style.Resources>
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value=" true">
+                <Setter Property="Background" Value="#5CDFDD"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+
     <!--Menu button icon-->
     <Style x:Key="menuButtonIcon2" TargetType="fax:IconImage">
         <Setter Property="Foreground" Value="{Binding Path=Tag, RelativeSource={RelativeSource AncestorType=Button}}"/>

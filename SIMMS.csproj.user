@@ -19,6 +19,12 @@
     <Compile Update="Modules\DataBaseModule\Views\DataBase.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Modules\DataBaseModule\Views\DataBaseCard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Modules\DataBaseModule\Views\DataBaseCreateProduct.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Modules\HomeModule\Views\ActivityCard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -52,6 +58,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Modules\DataBaseModule\Views\DataBase.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\DataBaseModule\Views\DataBaseCard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Modules\DataBaseModule\Views\DataBaseCreateProduct.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Modules\HomeModule\Views\ActivityCard.xaml">

@@ -66,3 +66,7 @@ C:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\obj\Debug\net6.0-windows
 C:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\obj\Debug\net6.0-windows\ref\SIMMS.dll
 C:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\obj\Debug\net6.0-windows\Modules\DataBaseModule\Views\DataBase.g.cs
 C:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\obj\Debug\net6.0-windows\Modules\DataBaseModule\Views\DataBase.baml
+C:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\obj\Debug\net6.0-windows\Modules\DataBaseModule\Views\DataBaseCard.g.cs
+C:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\obj\Debug\net6.0-windows\Modules\DataBaseModule\Views\DataBaseCard.baml
+C:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\obj\Debug\net6.0-windows\Modules\DataBaseModule\Views\DataBaseCreateProduct.g.cs
+C:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\obj\Debug\net6.0-windows\Modules\DataBaseModule\Views\DataBaseCreateProduct.baml
