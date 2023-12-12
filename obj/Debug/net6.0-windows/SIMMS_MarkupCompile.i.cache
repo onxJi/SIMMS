@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\obj\Debug\net6.0-windows\
+C:\Users\jaazi\OneDrive\Documentos\Repos\SIMMS\obj\Debug\net6.0-windows\
 SIMMS
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\jaazi\OneDrive\Escritorio\Proyecto TESIS\SIMMS\App.xaml
+C:\Users\jaazi\OneDrive\Documentos\Repos\SIMMS\App.xaml
 22774564863
 
 501556799638
-212-1941582671
+2122038850164
 ControlStyles\TextBoxPassword.xaml;ControlStyles\TextBoxPasswordRounded.xaml;Modules\ChangePasswordModule\Views\ChangePasswordRegion.xaml;Modules\DataBaseModule\Views\DataBase.xaml;Modules\DataBaseModule\Views\DataBaseCard.xaml;Modules\DataBaseModule\Views\DataBaseCreateProduct.xaml;Modules\HomeModule\Views\ActivityCard.xaml;Modules\HomeModule\Views\ChangeDataActivity.xaml;Modules\SendCodeModule\Views\SendCodeRegion.xaml;Styles\ButtonRounded.xaml;Styles\ButtonStyleIconWindow.xaml;Styles\Colors.xaml;Styles\MenuItem.xaml;Styles\Strings\Strings.xaml;Styles\TextBlockStyle.xaml;Styles\TextBoxRoundedStyle.xaml;Styles\WpfUIStyles.xaml;Views\Home.xaml;Views\Login.xaml;Views\MainWindow.xaml;Views\RegisterNewUser.xaml;Views\ResetPassword.xaml;
 
 True
